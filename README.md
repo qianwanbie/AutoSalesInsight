@@ -39,9 +39,9 @@ including:
     ```
 
 ## ▶️ Run the App
-    ```bash
+
     streamlit run app.py
-    ```
+
 
 ## 📦 Requirements
     See `requirements.txt` in this YAML file.

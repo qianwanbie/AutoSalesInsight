@@ -32,14 +32,13 @@ st.sidebar.markdown(
     **Author**  
     Boyuan Liu  
     📧 boyuan.liu@efrei.net  
-    [GitHub](https://github.com/qianwanbie)  
     """
 )
 
 st.sidebar.markdown(
     """
     **Supervisor**  
-    Mabo Mathew 
+    Mano Mathew 
     📧 mano.mathew@efrei.fr
     """
 )

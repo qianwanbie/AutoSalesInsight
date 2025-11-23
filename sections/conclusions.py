@@ -4,23 +4,74 @@ def show():
     """
     Conclusions page
     """
-    st.title(" Conclusions & Insights")
+    st.title("CONCLUSIONS AND INSIGHTS")
     
-    st.markdown("""
-    Based on the analysis conducted in this dashboard, we can summarize:
+    # Key Findings Section
+    st.header("KEY FINDINGS")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.subheader("Sales Patterns")
+        st.markdown("""
+        • Year-end sales peaks across all regions  
+        • Consistent seasonal trends 2018-2019  
+        • Holiday-driven purchasing patterns  
+        • Geographic performance variations
+        """)
+        
+        st.subheader("Pricing Behavior") 
+        st.markdown("""
+        • Low MSRP products show markup potential  
+        • High MSRP products maintain price stability  
+        • Seasonal price fluctuations present  
+        • Category-specific pricing sensitivities
+        """)
+    
+    with col2:
+        st.subheader("Market Segmentation")
+        st.markdown("""
+        • Four distinct customer clusters identified  
+        • Product preference-based segmentation  
+        • Clusters transcend geographic boundaries  
+        • Clear strategic grouping patterns
+        """)
+        
+        st.subheader("Product Preferences")
+        st.markdown("""
+        • Regional variations in product line favorability  
+        • Classic/vintage focus in mature markets  
+        • Practical vehicles in balanced markets  
+        • Luxury specialization in premium markets
+        """)
 
-    - **Seasonal Trends**: All regions show higher sales toward the end of the year, likely due to Christmas and winter holidays. In some Asian countries, Lunar New Year also drives sales.
-    - **Pricing Insights**: High MSRP products rarely have extreme markup, while lower MSRP products sometimes exceed the suggested price multiple times. During low season, actual prices stay close to MSRP.
-    - **Country Differences**: Product line preferences vary significantly by region. Cultural and geographic factors may influence these differences.
-    - **Clustering Analysis**: Countries with similar sales share profiles are grouped together, providing insight for regional strategies and inventory planning.
+    # Strategic Recommendations Section
+    st.header("STRATEGIC RECOMMENDATIONS")
+    
+    rec_col1, rec_col2 = st.columns(2)
+    
+    with rec_col1:
+        st.subheader("Cluster Strategy")
+        st.markdown("""
+        • Prioritize Cluster 1 for major investments  
+        • Develop cluster-specific product features  
+        • Implement differentiated pricing approaches  
+        • Optimize inventory using preference patterns
+        """)
+    
+    with rec_col2:
+        st.subheader("Operational Actions") 
+        st.markdown("""
+        • Target promotions around seasonal peaks  
+        • Manage pricing for low-MSRP products  
+        • Customize marketing by regional preferences  
+        • Use clustering for expansion planning
+        """)
 
-    """)
-    
-    st.subheader("Next Steps / Recommendations")
-    st.markdown("""
-    - Explore promotional strategies around peak sales months.
-    - Analyze pricing adjustments for low-MSRP products to control excessive markup.
-    - Investigate regional preferences for targeted marketing.
-    - Use clustering results to optimize inventory allocation and regional campaigns.
-    
+    # Final Insight
+    st.markdown("---")
+    st.info("""
+    **Strategic Insight**: Market segmentation based on product preferences provides 
+    more actionable intelligence than traditional geographic grouping, enabling 
+    targeted resource allocation and personalized market approaches.
     """)

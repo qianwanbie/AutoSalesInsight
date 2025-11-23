@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.express as px
 import altair as alt
 from utils.viz import line_chart_au_fr, choropleth_sales, heatmap_sales, scatter_price_msrp
+from utils.viz import customer_retention_heatmap
 
 def show(df_clean):
     """
@@ -16,6 +17,7 @@ def show(df_clean):
     # -------------------------
     st.subheader("Australia vs France Sales Trend ")
     st.altair_chart(line_chart_au_fr(df_clean), use_container_width=True)
+    
     # -------------------------
     # Sales Quantity Map by Month
     # -------------------------
@@ -23,6 +25,7 @@ def show(df_clean):
     months = df_clean["ORDERDATE"].dt.to_period("M").astype(str).sort_values().unique()
     selected_month = st.selectbox("Select Month for Map", months)
     st.plotly_chart(choropleth_sales(df_clean, selected_month), use_container_width=True)
+    
     """
     Display side-by-side heatmaps of sales by country and month for 2018 and 2019
     分别显示 2018 年和 2019 年每个月各国家的销量热力图
@@ -58,6 +61,17 @@ def show(df_clean):
       1. For products with higher MSRP, extreme overpricing is rare. In contrast, low-MSRP items sometimes sell at more than six times their reference price.
       2. Combining with seasonal sales observations: during off-peak periods, actual prices tend to stay close to MSRP, while in peak seasons, actual prices can significantly deviate from MSRP, both higher and lower.
     - Future Deep Dive analysis could explore pricing strategies, discounts, and market dynamics influencing these variations.
+    """)
+
+    # -------------------------
+    # NEW: Customer Retention Analysis
+    # -------------------------
+    st.subheader("Customer Retention Analysis")
+    st.plotly_chart(customer_retention_heatmap(df_clean), use_container_width=True)
+    st.markdown("""
+    - Analyze customer retention patterns over time.
+    - Cohorts show how well customers are retained after their first purchase.
+    - Darker blue indicates higher retention rates.
     """)
 
     st.markdown("---")

@@ -1,91 +1,50 @@
-readme: |
-  # 🌍 Global Sales Analysis Dashboard  
-  A Streamlit-based Interactive Data Visualization Project  
-  *(EFREI Paris × WUT Joint Project)*
+ README.md: |
+    # Sales Dashboard (Streamlit)
 
-  ## 📌 Project Overview
-  This project is an interactive **Streamlit dashboard** designed to explore and analyze global product sales data.
-  It provides a complete workflow — from data cleaning to KPIs, visual insights, and clustering analysis across countries.
+    This project is an interactive **Sales Dashboard** built with **Streamlit**.  
+    It provides a complete workflow from **data cleaning** to **visual analytics**, including:
 
-  The dashboard helps users understand:
-  - Differences in sales across regions  
-  - Pricing and product line patterns  
-  - Country similarity using clustering  
-  - Valuable insights for sales strategy  
+    ##  Features
+    - **Data Cleaning Page**: Upload, preview, and preprocess raw sales data.
+    - **Overview Dashboard**:  
+      - KPIs (total sales, average price, quantity)
+      - Sales by product line  
+      - Sales by country  
+      - Time-series trends  
+    - **Deep Dive Analysis**:
+      - Specific country insights
+      - Seasonal trends
+      - Pricing exploration
+    - **Country Clustering**:
+      - Group countries by similarity in sales patterns  
+      - Visualize clusters with charts
 
-  ## 🚀 Features
-  ### 1. Intro Page
-  High-level project overview and navigation guide.
+    ##  Project Structure
+    ```
+    final_project/
+    ├── app.py
+    ├── README.md
+    ├── requirements.txt
+    ├── assets/
+    ├── data/
+    ├── sections/
+    │   ├── overview.py
+    │   ├── deep_dives.py
+    │   ├── clustering.py
+    │   └── cleaning.py
+    └── utils/
+        ├── loaders.py
+        ├── charts.py
+        └── helpers.py
+    ```
 
-  ### 2. Data Cleaning
-  Includes:
-  - Raw data preview  
-  - Cleaning steps  
-  - Cleaned dataset  
+    ##  Run the App
+    ```bash
+    streamlit run app.py
+    ```
 
-  ### 3. Overview Dashboard
-  Displays:
-  - Total sales  
-  - Average price  
-  - Quantity  
-  - Sales by country  
-  - Sales by product line  
-  - Trends, heatmaps, correlations  
+    ##  Requirements
+    See `requirements.txt` in this YAML file.
 
-  ### 4. Deep Dives
-  Explore:
-  - Country-specific patterns  
-  - Seasonal behavior  
-  - Price insights  
-  - Product line performance  
-
-  ### 5. Country Clustering
-  Clustering using:
-  - Agglomerative Hierarchical Clustering  
-  - Euclidean distance + Ward linkage  
-
-  Visuals:
-  - Each cluster grouped together  
-  - Country flags + names  
-  - Correlation scores  
-
-  ## 📁 Project Structure
-final_project/
-├── app.py
-├── README.md
-├── requirements.txt
-├── assets/
-├── data/
-├── sections/
-└── utils/
-
-shell
-复制代码
-
-## 🛠 Installation
-git clone https://github.com/yourname/sales-dashboard.git
-pip install -r requirements.txt
-streamlit run app.py
-
-makefile
-复制代码
-
-## 🔍 Clustering Method
-**Model:** AgglomerativeClustering  
-**Features:** Sales share across product lines  
-**Results:** Cluster assignment + correlation score + grouped flags  
-
-## 👤 Author
-**Boyuan Liu**  
-Email: your_email@example.com  
-GitHub: https://github.com/yourusername  
-
-## 👨‍🏫 Supervisor
-**Dr. XXX (EFREI Paris)**  
-Email: teacher_email@example.com  
-
-## ⭐ Acknowledgements
-EFREI Paris, WUT, Streamlit, Pandas, Scikit-learn  
-
-## 📌 License
-MIT License
+    ##  Author
+    Boyuan Liu

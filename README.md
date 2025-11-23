@@ -1,11 +1,11 @@
- README.md: |
-    # Sales Dashboard (Streamlit)
+# Sales Dashboard (Streamlit)
 
-    This project is an interactive **Sales Dashboard** built with **Streamlit**.  
-    It provides a complete workflow from **data cleaning** to **visual analytics**, including:
+This project is an interactive **Sales Dashboard** built with **Streamlit**.  
+It provides a complete workflow from **data cleaning** to **visual analytics**, 
+including:
 
-    ##  Features
-    - **Data Cleaning Page**: Upload, preview, and preprocess raw sales data.
+ ## 🚀 Features
+- **Data Cleaning Page**: Upload, preview, and preprocess raw sales data.
     - **Overview Dashboard**:  
       - KPIs (total sales, average price, quantity)
       - Sales by product line  
@@ -19,7 +19,7 @@
       - Group countries by similarity in sales patterns  
       - Visualize clusters with charts
 
-    ##  Project Structure
+## 📁 Project Structure
     ```
     final_project/
     ├── app.py
@@ -38,13 +38,13 @@
         └── helpers.py
     ```
 
-    ##  Run the App
+## ▶️ Run the App
     ```bash
     streamlit run app.py
     ```
 
-    ##  Requirements
+## 📦 Requirements
     See `requirements.txt` in this YAML file.
 
-    ##  Author
+## ✨ Author
     Boyuan Liu

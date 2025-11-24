@@ -31,7 +31,8 @@ st.sidebar.markdown(
     """
     **Author**  
     Boyuan Liu  
-    📧 boyuan.liu@efrei.net  
+    boyuan.liu@efrei.net
+    https://github.com/qianwanbie/AutoSalesInsight  
     """
 )
 
@@ -39,7 +40,7 @@ st.sidebar.markdown(
     """
     **Supervisor**  
     Mano Mathew 
-    📧 mano.mathew@efrei.fr
+    mano.mathew@efrei.fr
     """
 )
 

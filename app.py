@@ -36,13 +36,9 @@ st.sidebar.markdown(
     """
 )
 
-st.sidebar.markdown(
-    """
-    **Supervisor**  
-    Mano Mathew 
-    mano.mathew@efrei.fr
-    """
-)
+st.sidebar.markdown("**Curse:Data Visualization 2025**")
+st.sidebar.markdown("**Prof. Mano Mathew**")
+st.sidebar.markdown("[Check out this LinkedIn](https://www.linkedin.com/in/manomathew/)",unsafe_allow_html=True)
 
 # Sidebar navigation / 侧边栏导航
 st.sidebar.title("Navigation ")
